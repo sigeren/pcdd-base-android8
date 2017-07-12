@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string-array name="game_type">
+        <item>北京28</item>
+        <item>加拿大28</item>
+        <item>北京快三</item>
+        <item>重庆时时彩</item>
+        <item>北京赛车</item>
+        <item>幸运飞艇</item>
+        <item>江苏快三</item>
+        <item>百家乐</item>
+        <item>新加坡28</item>
+    </string-array>
+</resources>
