@@ -85,12 +85,16 @@ public class ApiInterface {
 
     public static String WAP_BACKWATER_RULE = HOST + "pcdd-wap/views/module/index/huishui.html";
 	public static String WAP_NOTICE_DETAIL = HOST + "pcdd-wap/views/module/index/noticeDetails.html";
+
 	public static String WAP_BEIJING28_EXPLAIN = HOST + "pcdd-wap/views/module/index/beijingDetails.html";
 	public static String WAP_CANADA28_EXPLAIN = HOST + "pcdd-wap/views/module/index/jndDetails.html";
 	public static String WAP_BJK3_EXPLAIN = HOST + "pcdd-wap/views/module/index/bjk3Details.html";
 	public static String WAP_CQSSC_EXPLAIN = HOST + "pcdd-wap/views/module/index/sscDetails.html";
 	public static String WAP_BJSC_EXPLAIN = HOST + "pcdd-wap/views/module/index/scDetails.html";
 	public static String WAP_XYFT_EXPLAIN = HOST + "pcdd-wap/views/module/index/ftDetails.html";
+	public static String WAP_JSK3_EXPLAIN = HOST + "pcdd-wap/views/module/index/jsksDetails.html";
+	public static String WAP_BJL_EXPLAIN = HOST + "pcdd-wap/views/module/index/bjlDetails.html";
+
 	public static String WAP_TREND_CHART = HOST + "pcdd-wap/views/module/index/zoushi.html";
 	public static String WAP_BANNER_DETAIL = HOST + "pcdd-wap/views/module/index/bannerDetails.html";
 	public static String WAP_CUS_SVR = "http://kefu.easemob.com/webim/im.html?tenantId=36922";

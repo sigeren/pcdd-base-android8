@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
-    <string name="app_name">赛车演示</string>
+    <string name="app_name">子午演示版</string>
     <string name="net_err_404">服务器升级维护中...</string>
     <string name="load_more_text">Load More...</string>
     <string name="rule_backwater"><u>回水规则是什么？</u></string>

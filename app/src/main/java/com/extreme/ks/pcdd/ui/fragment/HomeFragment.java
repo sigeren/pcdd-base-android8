@@ -314,14 +314,14 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
             case R.id.ivJsK3Explain:
                 Intent it19 = new Intent(activity, WebLoadActivity.class);
                 it19.putExtra(WebLoadFragment.PARAMS_TITLE, "玩法说明");
-                it19.putExtra(WebLoadFragment.PARAMS_URL, ApiInterface.WAP_CQSSC_EXPLAIN);
+                it19.putExtra(WebLoadFragment.PARAMS_URL, ApiInterface.WAP_JSK3_EXPLAIN);
                 startActivity(it19);
                 break;
 
             case R.id.ivBjlExplain:
                 Intent it20 = new Intent(activity, WebLoadActivity.class);
                 it20.putExtra(WebLoadFragment.PARAMS_TITLE, "玩法说明");
-                it20.putExtra(WebLoadFragment.PARAMS_URL, ApiInterface.WAP_BJSC_EXPLAIN);
+                it20.putExtra(WebLoadFragment.PARAMS_URL, ApiInterface.WAP_BJL_EXPLAIN);
                 startActivity(it20);
                 break;
 
