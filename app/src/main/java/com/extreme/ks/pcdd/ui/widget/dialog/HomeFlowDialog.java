@@ -7,6 +7,7 @@ import android.view.View;
 import com.extreme.ks.pcdd.R;
 import com.extreme.ks.pcdd.ui.RechargeActivity;
 import com.extreme.ks.pcdd.ui.WithdrawActivity;
+import com.extreme.ks.pcdd.util.CheckUtil;
 
 /**
  * Created by hang on 2017/3/29.
@@ -32,7 +33,8 @@ public class HomeFlowDialog extends CommonDialog implements View.OnClickListener
                 break;
 
             case R.id.tvWithdraw:
-                context.startActivity(new Intent(context, WithdrawActivity.class));
+                if(CheckUtil.checkBind(context))
+                    context.startActivity(new Intent(context, WithdrawActivity.class));
                 break;
         }
     }

@@ -61,18 +61,20 @@
                 android:id="@+id/tvBetPoint"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_below="@+id/tvGameCount"
+                android:layout_marginTop="3dp"
+                android:layout_below="@+id/tvBetType"
                 android:layout_alignLeft="@+id/ivBetIcon"
                 android:textSize="13sp"
                 android:textColor="#fff"
-                android:text="金额：10元宝" />
+                android:text="金额：0元宝" />
 
             <TextView
                 android:id="@+id/tvBetType"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tvGameCount"
+                android:layout_alignLeft="@+id/ivBetIcon"
+                android:layout_marginTop="6dp"
                 android:textSize="13sp"
                 android:textColor="#fff"
                 android:text="投注类型：" />

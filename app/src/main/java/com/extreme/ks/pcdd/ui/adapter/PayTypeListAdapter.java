@@ -35,7 +35,18 @@ public class PayTypeListAdapter extends BaseRecyclerAdapter<PayTypeInfo> {
     @Override
     public void onBind(ViewHolder holder, final PayTypeInfo item, int position) {
         TextView text = holder.getView(R.id.tvPayType);
-        Drawable drawable = mContext.getResources().getDrawable(icons.get(item.type_key));
+        int icon = R.drawable.cz_03;
+        if("1".equals(item.type_key))
+            icon = R.drawable.cz_07;
+        else if("2".equals(item.type_key))
+            icon = R.drawable.cz_03;
+        else if("3".equals(item.type_key))
+            icon = R.drawable.cz_05;
+        else if(item.type_key.contains("ali"))
+            icon = R.drawable.cz_03;
+        else if(item.type_key.contains("weixin"))
+            icon = R.drawable.cz_05;
+        Drawable drawable = mContext.getResources().getDrawable(icon);
         if(drawable != null) {
             drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
         }
