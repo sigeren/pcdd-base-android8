@@ -6,11 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.hyphenate.chat.EMClient;
 import com.extreme.ks.pcdd.R;
 import com.extreme.ks.pcdd.manager.UserInfoManager;
 import com.extreme.ks.pcdd.ui.base.BaseTopActivity;
+import com.extreme.ks.pcdd.util.CheckUtil;
 import com.extreme.ks.pcdd.util.T;
+import com.hyphenate.chat.EMClient;
 
 /**
  * Created by hang on 2017/2/6.
@@ -58,7 +59,9 @@ public class SettingActivity extends BaseTopActivity implements View.OnClickList
                 break;
 
             case R.id.llBindBank:
-                startActivity(new Intent(this, BindBankActivity.class));
+                if(CheckUtil.checkBindMobile(this) && CheckUtil.checkSetWithdrawPwd(this)) {
+                    startActivity(new Intent(this, BindBankActivity.class));
+                }
                 break;
 
             case R.id.llLoginPwd:
