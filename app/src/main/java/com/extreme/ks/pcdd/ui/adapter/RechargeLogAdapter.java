@@ -51,10 +51,17 @@ public class RechargeLogAdapter extends BaseRecyclerAdapter<RechargeLogInfo> {
     private void bindBankView(ViewHolder holder, RechargeLogInfo item, int position) {
         holder.setText(R.id.tvTransferStatus, status[item.status]);
         //收款人
-        holder.setText(R.id.tvTransferBank, item.account_info.bank_name);
-        holder.setText(R.id.tvTransferName, item.account_info.real_name);
-        holder.setText(R.id.tvTransferBraunch, item.account_info.open_card_address);
-        holder.setText(R.id.tvTransferAccount, item.account_info.account);
+        if(item.account_info != null) {
+            holder.setText(R.id.tvTransferBank, item.account_info.bank_name);
+            holder.setText(R.id.tvTransferName, item.account_info.real_name);
+            holder.setText(R.id.tvTransferBraunch, item.account_info.open_card_address);
+            holder.setText(R.id.tvTransferAccount, item.account_info.account);
+        } else {
+            holder.setText(R.id.tvTransferBank, "");
+            holder.setText(R.id.tvTransferName, "");
+            holder.setText(R.id.tvTransferBraunch, "");
+            holder.setText(R.id.tvTransferAccount, "");
+        }
         //存款人
         holder.setText(R.id.tvDepositorName, item.real_name);
         holder.setText(R.id.tvDepositAccount, item.account);
@@ -70,8 +77,13 @@ public class RechargeLogAdapter extends BaseRecyclerAdapter<RechargeLogInfo> {
 
         holder.setText(R.id.tvTransferStatus, status[item.status]);
         //收款人
-        holder.setText(R.id.tvTransferAccount, item.account_info.account);
-        holder.setText(R.id.tvTransferName, item.account_info.real_name);
+        if(item.account_info != null) {
+            holder.setText(R.id.tvTransferAccount, item.account_info.account);
+            holder.setText(R.id.tvTransferName, item.account_info.real_name);
+        } else {
+            holder.setText(R.id.tvTransferAccount, "");
+            holder.setText(R.id.tvTransferName, "");
+        }
         //存款人
         holder.setText(R.id.tvDepositorName, item.real_name);
         holder.setText(R.id.tvDepositAccount, item.account);

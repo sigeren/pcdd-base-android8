@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
 
 import com.extreme.ks.pcdd.network.ApiInterface;
@@ -42,9 +41,10 @@ public class VersionManager {
                 @Override
                 public void onNext(VersionInfo versionInfo) {
                     try {
-                        if(versionInfo.version_code > ApkUtil.getVersionCode(context))
+                        int version = Integer.parseInt(versionInfo.version_no);
+                        if(version > ApkUtil.getVersionCode(context))
                             showTipDlg(context, versionInfo);
-                    } catch (PackageManager.NameNotFoundException e) {
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
