@@ -24,6 +24,6 @@ public class CommissionRuleAdapter extends BaseRecyclerAdapter<CommissionInfo> {
     public void onBind(ViewHolder holder, CommissionInfo item, int position) {
         holder.setText(R.id.tvLevel, item.level);
         holder.setText(R.id.tvUsrPoint, item.start_point+"-"+item.end_point);
-        holder.setText(R.id.tvCommissionPoint, item.get_point);
+        holder.setText(R.id.tvCommissionPoint, (item.get_point*100)+"%");
     }
 }

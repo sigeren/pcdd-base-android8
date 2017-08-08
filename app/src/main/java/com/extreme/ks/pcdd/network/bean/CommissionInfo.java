@@ -9,6 +9,6 @@ public class CommissionInfo {
     public String level;    //等级
     public String start_point;  //起始金额
     public String end_point;    //截止金额
-    public String get_point;    //获取佣金
+    public double get_point;    //获取佣金
     public long create_time;
 }

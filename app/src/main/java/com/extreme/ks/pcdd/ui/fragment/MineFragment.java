@@ -163,6 +163,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener, 
     public void updateView(UserInfo userInfo) {
         if(!TextUtils.isEmpty(userInfo.user_photo))
             ImageLoadManager.getInstance().displayImage(userInfo.user_photo, rivAvatar);
+        setText(R.id.tvUserId, "ID："+userInfo.id);
         tvNickname.setText(userInfo.nick_name);
         tvPersonalSign.setText(userInfo.personal_sign);
         tvUserPoint.setText("¥"+userInfo.point);

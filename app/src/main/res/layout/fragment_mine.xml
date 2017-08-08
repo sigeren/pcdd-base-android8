@@ -77,6 +77,16 @@
                         android:textStyle="bold"
                         android:textColorHint="#fff"
                         android:hint="这个人很懒，没有签名"/>
+
+                    <TextView
+                        android:id="@+id/tvUserId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#fff"
+                        android:textSize="11sp"
+                        android:textColorHint="#fff"
+                        android:hint="ID："/>
                 </LinearLayout>
 
                 <ImageView

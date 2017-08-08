@@ -10,8 +10,8 @@ public class DBManager implements DbUpgradeListener {
 	private static DBManager instance;
 	
 	private DbUtils db;
-	private String DB_NAME = "pcdd_vma";
-	private int DB_VERSION = 11;
+	private String DB_NAME = "ziwu_pc";
+	private int DB_VERSION = 1;
 	
 	private DBManager() {
 		db = DbUtils.create(PcddApp.applicationContext, DB_NAME, DB_VERSION, this);
