@@ -32,4 +32,5 @@ public class UserInfo implements Serializable {
 	public String bank_name;			//银行名称
 	public String bank_no;				//银行卡号
 	public String open_card_address;	//开户地址
+	public int account_bandType;
 }

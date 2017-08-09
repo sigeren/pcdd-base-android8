@@ -83,7 +83,7 @@ public class BetPanelFragment extends BaseFragment
     public void onRecyclerItemClicked(BaseRecyclerAdapter adapter, View view, int position) {
         oddsAdapter.selectedIndex = position;
         oddsAdapter.notifyDataSetChanged();
-        tvResult.setText(getString(R.string.bet_result_number, oddsAdapter.getmData().get(position).result));
+        tvResult.setText(oddsAdapter.getmData().get(position).result_desc);
     }
 
     @Override

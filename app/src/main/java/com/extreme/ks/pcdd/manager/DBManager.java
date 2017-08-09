@@ -11,7 +11,7 @@ public class DBManager implements DbUpgradeListener {
 	
 	private DbUtils db;
 	private String DB_NAME = "ziwu_pc";
-	private int DB_VERSION = 1;
+	private int DB_VERSION = 2;
 	
 	private DBManager() {
 		db = DbUtils.create(PcddApp.applicationContext, DB_NAME, DB_VERSION, this);

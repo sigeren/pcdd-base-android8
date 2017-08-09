@@ -13,5 +13,6 @@ public class BindBankRequest extends BaseRequest {
     public String bank_name;        //银行名称
     public String bank_no;          //银行卡号
     public String open_card_address;//开户地址
+    public String account_band_type;
 }
 

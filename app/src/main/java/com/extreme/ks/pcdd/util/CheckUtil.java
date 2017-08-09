@@ -30,6 +30,9 @@ public class CheckUtil {
     /** 是否绑定手机 */
     public static boolean checkBindMobile(Context context) {
         UserInfo userInfo = UserInfoManager.getUserInfo(context);
+        if(userInfo == null)
+            return false;
+
         if(TextUtils.isEmpty(userInfo.mobile)) {
             T.showShort("您还未绑定手机，请先绑定手机");
             context.startActivity(new Intent(context, BindMobileActivity.class));
@@ -41,6 +44,9 @@ public class CheckUtil {
     /** 是否设置提现密码 */
     public static boolean checkSetWithdrawPwd(Context context) {
         UserInfo userInfo = UserInfoManager.getUserInfo(context);
+        if(userInfo == null)
+            return false;
+
         if(TextUtils.isEmpty(userInfo.withdrawals_password)) {
             T.showShort("您还未设置提现密码，请先设置提现密码");
             context.startActivity(new Intent(context, EditWithdrawPwdActivity.class));

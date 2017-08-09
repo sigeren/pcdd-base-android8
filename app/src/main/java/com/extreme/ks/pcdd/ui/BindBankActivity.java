@@ -1,8 +1,12 @@
 package com.extreme.ks.pcdd.ui;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.extreme.ks.pcdd.R;
 import com.extreme.ks.pcdd.manager.UserInfoManager;
@@ -16,6 +20,7 @@ import com.extreme.ks.pcdd.util.MD5Utils;
 import com.extreme.ks.pcdd.util.T;
 import com.extreme.ks.pcdd.util.ViewUtil;
 
+
 /**
  * Created by hang on 2017/1/23.
  * 绑定银行卡
@@ -24,12 +29,16 @@ import com.extreme.ks.pcdd.util.ViewUtil;
 public class BindBankActivity extends BaseTopActivity implements View.OnClickListener {
 
     private EditText edRealName;
-    private EditText edBankName;
+    private TextView edBankName;
     private EditText edBankNo;
     private EditText edBankAddr;
     private EditText edWithdrawPwd;
+    private LinearLayout llBankAddr;
 
     private UserInfo userInfo;
+
+    private String[] types = {"银行卡", "支付宝"};
+    private int type = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,12 +48,13 @@ public class BindBankActivity extends BaseTopActivity implements View.OnClickLis
     }
 
     private void init() {
-        initTopBar("绑定银行卡");
+        initTopBar("绑定提现账户");
         edRealName = getView(R.id.edRealName);
         edBankName = getView(R.id.edBankName);
         edBankNo = getView(R.id.edBankNo);
         edBankAddr = getView(R.id.edBankAddr);
         edWithdrawPwd = getView(R.id.edWithdrawPwd);
+        llBankAddr = getView(R.id.llBankAddr);
 
         userInfo = UserInfoManager.getUserInfo(this);
         edRealName.setText(userInfo.real_name);
@@ -52,25 +62,54 @@ public class BindBankActivity extends BaseTopActivity implements View.OnClickLis
         edBankNo.setText(userInfo.bank_no);
         edBankAddr.setText(userInfo.open_card_address);
 
+        if(userInfo.account_bandType != 0)
+            type = userInfo.account_bandType;
+        updateTypeView(type);
+
+        edBankName.setOnClickListener(this);
         getView(R.id.btnOK).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch(v.getId()) {
+            case R.id.edBankName:
+                new AlertDialog.Builder(this).setTitle("选择绑定类型")
+                        .setItems(types, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                edBankName.setText(types[which]);
+                                tvTopTitle.setText("绑定"+types[which]);
+                                type = which+1;
+                                updateTypeView(type);
+                            }
+                        }).show();
+                break;
+
             case R.id.btnOK:
                 if(ViewUtil.checkEditEmpty(edRealName, "请填写真实姓名"))
                     return;
-                if(ViewUtil.checkEditEmpty(edBankName, "请填写真实姓名"))
+                if(type == 0) {
+                    T.showShort("请选择绑定类型");
                     return;
-                if(ViewUtil.checkEditEmpty(edBankNo, "请填写真实姓名"))
+                }
+                if(ViewUtil.checkEditEmpty(edBankNo, "请填写银行卡号"))
                     return;
-                if(ViewUtil.checkEditEmpty(edBankAddr, "请填写真实姓名"))
+                if(type==1 && ViewUtil.checkEditEmpty(edBankAddr, "请填写开户地址"))
                     return;
-                if(ViewUtil.checkEditEmpty(edWithdrawPwd, "请填写真实姓名"))
+                if(ViewUtil.checkEditEmpty(edWithdrawPwd, "请填写提现密码"))
                     return;
                 bind();
                 break;
+        }
+    }
+
+    public void updateTypeView(int type) {
+        if(type == 1) {
+            //bank
+            llBankAddr.setVisibility(View.VISIBLE);
+        } else {
+            llBankAddr.setVisibility(View.GONE);
         }
     }
 
@@ -84,6 +123,7 @@ public class BindBankActivity extends BaseTopActivity implements View.OnClickLis
         req.bank_name = edBankName.getText().toString();
         req.bank_no = edBankNo.getText().toString();
         req.open_card_address = edBankAddr.getText().toString();
+        req.account_band_type = type+"";
         HttpResultCallback<String> callback = new HttpResultCallback<String>() {
             @Override
             public void onStart() {
