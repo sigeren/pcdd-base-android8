@@ -5,12 +5,14 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.extreme.ks.pcdd.R;
+import com.extreme.ks.pcdd.app.PcddApp;
 import com.extreme.ks.pcdd.network.ApiInterface;
 import com.extreme.ks.pcdd.network.HttpResultCallback;
 import com.extreme.ks.pcdd.network.MySubcriber;
 import com.extreme.ks.pcdd.network.bean.RechargeAccountInfo;
 import com.extreme.ks.pcdd.network.request.RechargeOfflineRequest;
 import com.extreme.ks.pcdd.ui.base.BaseTopActivity;
+import com.extreme.ks.pcdd.util.PreferenceUtils;
 import com.extreme.ks.pcdd.util.T;
 import com.extreme.ks.pcdd.util.Utility;
 import com.extreme.ks.pcdd.util.ViewUtil;
@@ -54,6 +56,10 @@ public class TransferBankActivity extends BaseTopActivity implements View.OnClic
         getView(R.id.btnCopyAccount).setOnClickListener(this);
         getView(R.id.btnCopyBranch).setOnClickListener(this);
         getView(R.id.btnOK).setOnClickListener(this);
+
+        edBankName.setText(PreferenceUtils.getPrefString(PcddApp.applicationContext, "bankName", ""));
+        edRealName.setText(PreferenceUtils.getPrefString(PcddApp.applicationContext, "realName", ""));
+        edBankAccount.setText(PreferenceUtils.getPrefString(PcddApp.applicationContext, "bankAccount", ""));
     }
 
     @Override
@@ -93,7 +99,7 @@ public class TransferBankActivity extends BaseTopActivity implements View.OnClic
     }
 
     public void submit() {
-        RechargeOfflineRequest req = new RechargeOfflineRequest();
+        final RechargeOfflineRequest req = new RechargeOfflineRequest();
         req.account_id = data.id+"";
         req.account = edBankAccount.getText().toString();
         req.account_type = "1";
@@ -108,6 +114,9 @@ public class TransferBankActivity extends BaseTopActivity implements View.OnClic
             @Override
             public void onCompleted() {
                 T.showShort("提交成功，请等待客服审核");
+                PreferenceUtils.setPrefString(PcddApp.applicationContext, "bankName", req.bank_name);
+                PreferenceUtils.setPrefString(PcddApp.applicationContext, "realName", req.real_name);
+                PreferenceUtils.setPrefString(PcddApp.applicationContext, "bankAccount", req.account);
             }
 
             @Override

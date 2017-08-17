@@ -108,8 +108,12 @@ public class BindBankActivity extends BaseTopActivity implements View.OnClickLis
         if(type == 1) {
             //bank
             llBankAddr.setVisibility(View.VISIBLE);
+            setText(R.id.tvLabelAccount, "开户账号：");
+            setText(R.id.tvLabelName, "开户姓名：");
         } else {
             llBankAddr.setVisibility(View.GONE);
+            setText(R.id.tvLabelAccount, "支付宝号：");
+            setText(R.id.tvLabelName, "支付宝名：");
         }
     }
 
@@ -136,6 +140,7 @@ public class BindBankActivity extends BaseTopActivity implements View.OnClickLis
                 userInfo.bank_name = req.bank_name;
                 userInfo.bank_no = req.bank_no;
                 userInfo.open_card_address = req.open_card_address;
+                req.account_band_type = type+"";
                 UserInfoManager.saveUserInfo(BindBankActivity.this, userInfo);
                 finish();
             }

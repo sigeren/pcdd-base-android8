@@ -93,6 +93,12 @@ public class UserInfoManager {
                     setUserPwd(PcddApp.applicationContext, "");
                     setLoginType(PcddApp.applicationContext, 0);
                     setLoginStatus(PcddApp.applicationContext, false);
+
+					PreferenceUtils.setPrefString(PcddApp.applicationContext, "account", "");
+					PreferenceUtils.setPrefString(PcddApp.applicationContext, "name", "");
+					PreferenceUtils.setPrefString(PcddApp.applicationContext, "bankName", "");
+					PreferenceUtils.setPrefString(PcddApp.applicationContext, "realName", "");
+					PreferenceUtils.setPrefString(PcddApp.applicationContext, "bankAccount", "");
                 } catch (DbException e) {
                     e.printStackTrace();
                 }

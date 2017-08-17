@@ -58,7 +58,7 @@ public class AliAccountAdapter extends BaseRecyclerAdapter<RechargeAccountInfo> 
             public void onClick(View v) {
                 Intent it = new Intent(mContext, TransferAliActivity.class);
                 it.putExtra("id", item.id);
-                it.putExtra("type", "2".equals(typeKey)? 2 : 3);
+                it.putExtra("type", typeKey);
                 it.putExtra("qrUrl", item.photo);
                 mContext.startActivity(it);
             }
