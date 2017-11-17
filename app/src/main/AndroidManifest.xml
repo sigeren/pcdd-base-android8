@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.extreme.ks.pcdd" >
+    package="com.df.vip.pcdd" >
 
     <!-- 这个权限用于进行网络定位 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -39,17 +39,17 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/app_icon"
+        android:icon="@mipmap/app_log"
         android:largeHeap="true"
         android:label="@string/app_name"
-        android:name="com.extreme.ks.pcdd.app.PcddApp"
+        android:name="com.df.vip.pcdd.app.PcddApp"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
 
-        <!-- 设置环信应用的AppKey -->
+        <!-- 设置环信应用的AppKey  1122170827115179#dingfeng  1122170827115179#lottery -->
         <meta-data
             android:name="EASEMOB_APPKEY"
-            android:value="1173170518115597#k3dd"/>
+            android:value="1122170827115179#lottery"/>
         <!-- 声明SDK所需的service SDK核心功能 -->
         <service
             android:name="com.hyphenate.chat.EMChatService"
@@ -105,15 +105,15 @@
 
         <!-- 微信分享回调 -->
         <activity
-            android:name="com.extreme.ks.pcdd.wxapi.WXEntryActivity"
+            android:name="com.df.vip.pcdd.wxapi.WXEntryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <!-- share sdk end -->
 
-        <activity android:name="com.extreme.ks.pcdd.MainActivity"
-            android:launchMode="singleTask"
+        <activity android:name="com.df.vip.pcdd.MainActivity"
+            android:launchMode="singleTop"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -121,67 +121,67 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.extreme.ks.pcdd.ui.MoreActivity"
+        <activity android:name="com.df.vip.pcdd.ui.MoreActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name="com.extreme.ks.pcdd.ui.LevelSelectActivity"
+        <activity android:name="com.df.vip.pcdd.ui.LevelSelectActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name="com.extreme.ks.pcdd.ui.RoomListActivity"
+        <activity android:name="com.df.vip.pcdd.ui.RoomListActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name="com.extreme.ks.pcdd.ui.EditPersonActivity"
+        <activity android:name="com.df.vip.pcdd.ui.EditPersonActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name="com.extreme.ks.pcdd.ui.WalletActivity"
+        <activity android:name="com.df.vip.pcdd.ui.WalletActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name="com.extreme.ks.pcdd.ui.BackwaterActivity"
+        <activity android:name="com.df.vip.pcdd.ui.BackwaterActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name="com.extreme.ks.pcdd.ui.AccountingRecordActivity"
+        <activity android:name="com.df.vip.pcdd.ui.AccountingRecordActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.GameRecordActivity"
+        <activity android:name="com.df.vip.pcdd.ui.GameRecordActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.RechargeRecordActivity"
+        <activity android:name="com.df.vip.pcdd.ui.RechargeRecordActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.WithdrawRecordActivity"
+        <activity android:name="com.df.vip.pcdd.ui.WithdrawRecordActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.RechargeActivity"
+        <activity android:name="com.df.vip.pcdd.ui.RechargeActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.BindBankActivity"
+        <activity android:name="com.df.vip.pcdd.ui.BindBankActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.GiftListActivity"
+        <activity android:name="com.df.vip.pcdd.ui.GiftListActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.RechargeOnlineFirstepActivity"
+        <activity android:name="com.df.vip.pcdd.ui.RechargeOnlineFirstepActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.RechargeOnlineSecondActivity"
+        <activity android:name="com.df.vip.pcdd.ui.RechargeOnlineSecondActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.LoginActivity"
+        <activity android:name="com.df.vip.pcdd.ui.LoginActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.RegisterActivity"
+        <activity android:name="com.df.vip.pcdd.ui.RegisterActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.SettingActivity"
+        <activity android:name="com.df.vip.pcdd.ui.SettingActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.ChatActivity"
+        <activity android:name="com.df.vip.pcdd.ui.ChatActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
@@ -208,73 +208,79 @@
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="3ecea51f560650b1ed8a4b99808f52e8" />
         <!--环信end-->
-        <activity android:name="com.extreme.ks.pcdd.ui.GameRecordFilterActivity"
+        <activity android:name="com.df.vip.pcdd.ui.GameRecordFilterActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.WebLoadActivity"
+        <activity android:name="com.df.vip.pcdd.ui.WebLoadActivity"
             android:hardwareAccelerated="true"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.EditWithdrawPwdActivity"
+        <activity android:name="com.df.vip.pcdd.ui.EditWithdrawPwdActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.WithdrawActivity"
+        <activity android:name="com.df.vip.pcdd.ui.WithdrawActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.BindMobileActivity"
+        <activity android:name="com.df.vip.pcdd.ui.BindMobileActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.MyMessageActivity"
+        <activity android:name="com.df.vip.pcdd.ui.MyMessageActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.AliAcountListActivity"
+        <activity android:name="com.df.vip.pcdd.ui.AliAcountListActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.BankAccountListActivity"
+        <activity android:name="com.df.vip.pcdd.ui.BankAccountListActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.TransferBankActivity"
+        <activity android:name="com.df.vip.pcdd.ui.TransferBankActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.TransferAliActivity"
+        <activity android:name="com.df.vip.pcdd.ui.TransferAliActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.EditLoginPwdActivity"
+        <activity android:name="com.df.vip.pcdd.ui.EditLoginPwdActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.RechargeLogActivity"
+        <activity android:name="com.df.vip.pcdd.ui.RechargeLogActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.GiftExchangeLogActivity"
+        <activity android:name="com.df.vip.pcdd.ui.GiftExchangeLogActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.AboutActivity"
+        <activity android:name="com.df.vip.pcdd.ui.AboutActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.ResetLoginPwdActivity"
+        <activity android:name="com.df.vip.pcdd.ui.ResetLoginPwdActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.CusSvrActivity"
+        <activity android:name="com.df.vip.pcdd.ui.CusSvrActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.LoadingActivity"
+        <activity android:name="com.df.vip.pcdd.ui.LoadingActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.ShareActivity"
+        <activity android:name="com.df.vip.pcdd.ui.ShareActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.ProxyActivity"
+        <activity android:name="com.df.vip.pcdd.ui.ProxyActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.MyEarningActivity"
+        <activity android:name="com.df.vip.pcdd.ui.MyEarningActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.extreme.ks.pcdd.ui.ShareRuleActivity"
+        <activity android:name="com.df.vip.pcdd.ui.ShareRuleActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.df.vip.pcdd.ui.LotteryActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.df.vip.pcdd.ui.LotteryLogActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
     </application>

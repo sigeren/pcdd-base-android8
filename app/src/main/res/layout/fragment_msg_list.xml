@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.extreme.ks.pcdd.ui.widget.refresh.PullLoadMoreRecyclerView
+<com.df.vip.pcdd.ui.widget.refresh.PullLoadMoreRecyclerView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/rvData"
     android:layout_width="match_parent"

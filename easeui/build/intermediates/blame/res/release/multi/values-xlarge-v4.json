@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "D:\\Work\\AndroidWorkspace\\pcdd-base3\\easeui\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-xlarge-v4\\values-xlarge-v4.xml",
+        "outputFile": "F:\\baiduyundown\\pcdd-base-android88\\pcdd-base-android\\easeui\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-xlarge-v4\\values-xlarge-v4.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 103
                 },
                 "from": {
-                    "file": "D:\\Work\\AndroidWorkspace\\pcdd-base3\\easeui\\res\\values-xlarge\\ease_dimens.xml",
+                    "file": "F:\\baiduyundown\\pcdd-base-android88\\pcdd-base-android\\easeui\\res\\values-xlarge\\ease_dimens.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 157
                 },
                 "from": {
-                    "file": "D:\\Work\\AndroidWorkspace\\pcdd-base3\\easeui\\res\\values-xlarge\\ease_dimens.xml",
+                    "file": "F:\\baiduyundown\\pcdd-base-android88\\pcdd-base-android\\easeui\\res\\values-xlarge\\ease_dimens.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,

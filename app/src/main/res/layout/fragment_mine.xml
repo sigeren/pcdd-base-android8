@@ -38,7 +38,7 @@
                 android:background="@drawable/img_wd_tx_diban"
                 android:orientation="horizontal">
 
-                <com.extreme.ks.pcdd.ui.widget.CircleImageView
+                <com.df.vip.pcdd.ui.widget.CircleImageView
                     android:id="@+id/rivAvatar"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
@@ -77,16 +77,6 @@
                         android:textStyle="bold"
                         android:textColorHint="#fff"
                         android:hint="这个人很懒，没有签名"/>
-
-                    <TextView
-                        android:id="@+id/tvUserId"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:textColor="#fff"
-                        android:textSize="11sp"
-                        android:textColorHint="#fff"
-                        android:hint="ID："/>
                 </LinearLayout>
 
                 <ImageView
@@ -191,6 +181,36 @@
                         android:layout_marginLeft="10dp"
                         android:layout_weight="1"
                         android:text="礼物兑换"
+                        android:textColor="@color/text_black"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/arrow_right_gray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llLottery"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="7dp"
+                    android:background="#fff"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/ic_lottery" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="幸运大转盘"
                         android:textColor="@color/text_black"
                         android:textSize="15sp" />
 

@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "D:\\Work\\AndroidWorkspace\\pcdd-base3\\easeui\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v11\\values-v11.xml",
+        "outputFile": "F:\\baiduyundown\\pcdd-base-android88\\pcdd-base-android\\easeui\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v11\\values-v11.xml",
         "map": [
             {
                 "to": {
@@ -12,7 +12,7 @@
                     "endOffset": 219
                 },
                 "from": {
-                    "file": "D:\\Work\\AndroidWorkspace\\pcdd-base3\\easeui\\res\\values-v11\\ease_styles.xml",
+                    "file": "F:\\baiduyundown\\pcdd-base-android88\\pcdd-base-android\\easeui\\res\\values-v11\\ease_styles.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -33,7 +33,7 @@
                     "endOffset": 394
                 },
                 "from": {
-                    "file": "D:\\Work\\AndroidWorkspace\\pcdd-base3\\easeui\\res\\values-v11\\ease_styles.xml",
+                    "file": "F:\\baiduyundown\\pcdd-base-android88\\pcdd-base-android\\easeui\\res\\values-v11\\ease_styles.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
@@ -53,7 +53,7 @@
                     "endOffset": 479
                 },
                 "from": {
-                    "file": "D:\\Work\\AndroidWorkspace\\pcdd-base3\\easeui\\res\\values-v11\\ease_styles.xml",
+                    "file": "F:\\baiduyundown\\pcdd-base-android88\\pcdd-base-android\\easeui\\res\\values-v11\\ease_styles.xml",
                     "position": {
                         "startLine": 11,
                         "startColumn": 4,

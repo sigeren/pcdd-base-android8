@@ -31,7 +31,7 @@
             android:layout_height="150dp"
             app:canLoop="true" />
 
-        <com.extreme.ks.pcdd.ui.widget.MyTabView
+        <com.df.vip.pcdd.ui.widget.MyTabView
             android:id="@+id/tabDynamic"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

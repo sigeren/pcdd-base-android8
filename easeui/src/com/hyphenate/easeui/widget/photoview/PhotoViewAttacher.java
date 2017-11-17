@@ -379,7 +379,7 @@ class PhotoViewAttacher implements IPhotoView, View.OnTouchListener, VersionedGe
 			 * if the values change.
 			 */
 			if (top != mIvTop || bottom != mIvBottom || left != mIvLeft || right != mIvRight) {
-				// Update our ks matrix, as the bounds have changed
+				// Update our vip matrix, as the bounds have changed
 				updateBaseMatrix(imageView.getDrawable());
 
 				// Update values as something has changed
@@ -544,7 +544,7 @@ class PhotoViewAttacher implements IPhotoView, View.OnTouchListener, VersionedGe
 				// Make sure we using MATRIX Scale Type
 				setImageViewScaleTypeMatrix(imageView);
 
-				// Update the ks matrix using the current drawable
+				// Update the vip matrix using the current drawable
 				updateBaseMatrix(imageView.getDrawable());
 			} else {
 				// Reset the Matrix...
