@@ -646,8 +646,8 @@ public class ChatBetFragment extends EaseChatFragment implements BettingOddsDlg.
                 tvMyPoint.setText(userPoint+"元宝");
                 sendMsg(bettingJson);
                 T.showShort("投注成功");
-                if(oddsDlg != null)
-                    oddsDlg.dismiss();
+//                if(oddsDlg != null)
+//                    oddsDlg.dismiss();
             }
 
             @Override

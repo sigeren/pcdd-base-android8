@@ -49,7 +49,7 @@
         <!-- 设置环信应用的AppKey  1122170827115179#dingfeng  1122170827115179#lottery -->
         <meta-data
             android:name="EASEMOB_APPKEY"
-            android:value="1122170827115179#dingfeng"/>
+            android:value="1122170827115179#lottery"/>
         <!-- 声明SDK所需的service SDK核心功能 -->
         <service
             android:name="com.hyphenate.chat.EMChatService"
