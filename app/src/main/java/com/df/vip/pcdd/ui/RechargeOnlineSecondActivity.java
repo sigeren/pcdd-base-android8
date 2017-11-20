@@ -3,10 +3,12 @@ package com.df.vip.pcdd.ui;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.v4.content.res.ResourcesCompat;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
@@ -71,7 +73,15 @@ public class RechargeOnlineSecondActivity extends BaseTopActivity implements Vie
             getView(R.id.btnPayCompleted).setVisibility(View.GONE);
         }
 
-        ImageLoadManager.getInstance().displayImage(qrUrl, ivQr);
+        if(qrUrl.contains("http://")){
+            ImageLoadManager.getInstance().displayImage(qrUrl,ivQr);
+        }else{
+            Bitmap bitmap= ImageLoadManager.getInstance().stringtoBitmap(qrUrl,this);
+            ivQr.setImageBitmap(bitmap);
+        }
+
+
+
 
         getView(R.id.btnPrevious).setOnClickListener(this);
         getView(R.id.btnRecharge).setOnClickListener(this);

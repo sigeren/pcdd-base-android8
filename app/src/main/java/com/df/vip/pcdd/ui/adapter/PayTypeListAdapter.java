@@ -30,6 +30,7 @@ public class PayTypeListAdapter extends BaseRecyclerAdapter<PayTypeInfo> {
         icons.put("3", R.drawable.cz_05);
         icons.put("aiyi_ali", R.drawable.cz_03);
         icons.put("aiyi_weixin", R.drawable.cz_05);
+        icons.put("aiyi_qq", R.drawable.cz_05);
     }
 
     @Override
@@ -45,6 +46,8 @@ public class PayTypeListAdapter extends BaseRecyclerAdapter<PayTypeInfo> {
         else if(item.type_key.contains("ali"))
             icon = R.drawable.cz_03;
         else if(item.type_key.contains("weixin"))
+            icon = R.drawable.cz_05;
+        else if(item.type_key.contains("qq"))
             icon = R.drawable.cz_05;
         Drawable drawable = mContext.getResources().getDrawable(icon);
         if(drawable != null) {

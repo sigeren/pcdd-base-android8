@@ -21,6 +21,8 @@ import com.df.vip.pcdd.ui.base.BaseFragment;
 import com.df.vip.pcdd.util.CheckUtil;
 import com.df.vip.pcdd.util.T;
 
+import java.util.List;
+
 
 /**
  * Created by hang on 2017/1/23.

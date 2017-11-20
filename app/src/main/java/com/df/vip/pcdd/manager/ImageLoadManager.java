@@ -1,9 +1,13 @@
 package com.df.vip.pcdd.manager;
 
+import android.app.Activity;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.text.TextUtils;
+import android.util.Base64;
 import android.widget.ImageView;
 
+import com.df.vip.pcdd.ui.RechargeOnlineSecondActivity;
 import com.nostra13.universalimageloader.cache.memory.impl.UsingFreqLimitedMemoryCache;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -85,4 +89,27 @@ public class ImageLoadManager {
 	public Bitmap loadImageSyn(String uri) {
 		return ImageLoader.getInstance().loadImageSync(ApiInterface.HOST+uri, options);
 	}
+
+	/**
+	 * 字符串转换成Bitmap类型
+	 * @param string
+	 * @param activity
+	 * @return
+	 */
+	public Bitmap stringtoBitmap(String string, Activity activity){
+		Bitmap bitmap=null;
+		try {
+			byte[] bitmapArray = Base64.decode(string.split(",")[1], Base64.DEFAULT);
+			bitmap= BitmapFactory.decodeByteArray(bitmapArray, 0, bitmapArray.length);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		if(bitmap==null){
+			bitmap= BitmapFactory.decodeResource(activity.getResources(), R.drawable.p_load_failed);
+		}
+		return bitmap;
+	}
+
+
+
 }
