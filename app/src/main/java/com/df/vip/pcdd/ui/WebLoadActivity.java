@@ -5,6 +5,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.WindowManager;
 
 import com.df.vip.pcdd.R;
+import com.df.vip.pcdd.network.Encrypt;
+import com.df.vip.pcdd.network.request.BaseRequest;
 import com.df.vip.pcdd.ui.base.BaseTopActivity;
 import com.df.vip.pcdd.ui.fragment.WebLoadFragment;
 
@@ -24,7 +26,9 @@ public class WebLoadActivity extends BaseTopActivity {
 		
 		title = getIntent().getStringExtra(WebLoadFragment.PARAMS_TITLE);
 		url = getIntent().getStringExtra(WebLoadFragment.PARAMS_URL);
-		
+		BaseRequest baseRequest = new BaseRequest();
+		Encrypt.encrypt(baseRequest);
+		String urlb = url +"&sign="+baseRequest.sign+"&timestamp="+baseRequest.timestamp+"&user_id="+baseRequest.user_id;
 		initTopBar(title);
 		FragmentTransaction t = getSupportFragmentManager().beginTransaction();
 		fragment = WebLoadFragment.getInstance(url);
