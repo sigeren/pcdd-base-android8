@@ -31,7 +31,7 @@ public class WebLoadActivity extends BaseTopActivity {
 		String urlb = url +"&sign="+baseRequest.sign+"&timestamp="+baseRequest.timestamp+"&user_id="+baseRequest.user_id;
 		initTopBar(title);
 		FragmentTransaction t = getSupportFragmentManager().beginTransaction();
-		fragment = WebLoadFragment.getInstance(url);
+		fragment = WebLoadFragment.getInstance(urlb);
 		t.replace(R.id.rlContent, fragment);
 		t.commit();
 	}

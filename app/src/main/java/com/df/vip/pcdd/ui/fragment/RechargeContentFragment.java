@@ -69,7 +69,9 @@ public class RechargeContentFragment extends BaseFragment implements View.OnClic
 
             @Override
             public void onNext(PayTypeListResponse data) {
-                final PayTypeListAdapter onlineAdapter = new PayTypeListAdapter(activity, data.online);
+                List<PayTypeInfo> data2  =  data.online;
+                data2.remove(2);
+                final PayTypeListAdapter onlineAdapter = new PayTypeListAdapter(activity,data2);
                 onlineAdapter.setOnRecyclerItemClickListener(new BaseRecyclerAdapter.OnRecyclerItemClickListener() {
                     @Override
                     public void onRecyclerItemClicked(BaseRecyclerAdapter adapter, View view, int position) {

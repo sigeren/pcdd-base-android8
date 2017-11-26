@@ -46,12 +46,14 @@ import com.google.gson.Gson;
 import com.hyphenate.EMMessageListener;
 import com.hyphenate.chat.EMChatManager;
 import com.hyphenate.chat.EMClient;
+import com.hyphenate.chat.EMConversation;
 import com.hyphenate.chat.EMMessage;
 import com.hyphenate.chat.EMTextMessageBody;
 import com.hyphenate.easeui.EaseConstant;
 import com.hyphenate.easeui.controller.EaseUI;
 import com.hyphenate.easeui.domain.EaseEmojicon;
 import com.hyphenate.easeui.ui.EaseChatFragment;
+import com.hyphenate.easeui.utils.EaseCommonUtils;
 import com.hyphenate.easeui.widget.EaseChatInputMenu;
 import com.hyphenate.easeui.widget.SimpleCountDownTextView;
 import com.hyphenate.easeui.widget.chatrow.EaseCustomChatRowProvider;
@@ -161,6 +163,8 @@ public class ChatBetFragment extends EaseChatFragment implements BettingOddsDlg.
                 sendJoinedMsg();
             }
         }, 500);
+
+//        initData();
     }
 
     @Override
@@ -168,6 +172,19 @@ public class ChatBetFragment extends EaseChatFragment implements BettingOddsDlg.
 //        for(int i = 0; i < 2; i++){
 //            inputMenu.registerExtendMenuItem(itemStrings[i], itemdrawables[i], itemIds[i], extendMenuItemClickListener);
 //        }
+    }
+
+    public void initData(){
+        EMConversation conversation = EMClient.getInstance().chatManager().getConversation(toChatUsername);
+//获取此会话的所有消息
+        List<EMMessage> messages = conversation.getAllMessages();
+//SDK初始化加载的聊天记录为20条，到顶时需要去DB里获取更多
+//获取startMsgId之前的pagesize条消息，此方法获取的messages SDK会自动存入到此会话中，APP中无需再次把获取到的messages添加到会话中
+//        List<EMMessage> messages = conversation.loadMoreMsgFromDB(startMsgId, pagesize);
+//        EMClient.getInstance().chatManager().fetchHistoryMessages(
+//                toChatUsername, EaseCommonUtils.getConversationType(chatType), pagesize, "");
+        EMClient.getInstance().chatManager().importMessages(null);
+        this.conversation = EMClient.getInstance().chatManager().getConversation(toChatUsername, EaseCommonUtils.getConversationType(chatType), true);
     }
 
     public void initListener() {
@@ -191,10 +208,12 @@ public class ChatBetFragment extends EaseChatFragment implements BettingOddsDlg.
 
             @Override
             public void onMessageRead(List<EMMessage> list) {
+                Log.e("list","list");
             }
 
             @Override
             public void onMessageDelivered(List<EMMessage> list) {
+                Log.e("list","list");
             }
 
             @Override
@@ -387,8 +406,9 @@ public class ChatBetFragment extends EaseChatFragment implements BettingOddsDlg.
 
     @Override
     public void onBackPressed() {
+        getActivity().finish();
         if (inputMenu.onBackPressed()) {
-            exitRoom();
+//            exitRoom();
         }
     }
 
@@ -665,11 +685,11 @@ public class ChatBetFragment extends EaseChatFragment implements BettingOddsDlg.
 
 
     public void sendMsg(BettingJson bettingJson){
-        UserInfo userInfo = UserInfoManager.getUserInfo(getContext());
-        if(bettingJson.nick_name !=null && null != userInfo && !TextUtils.isEmpty(userInfo.nick_name)){
-            bettingJson.nick_name =userInfo.nick_name ;
-        }
-        String json =new Gson().toJson(bettingJson);
-        sendTextMessage(json);
+//        UserInfo userInfo = UserInfoManager.getUserInfo(getContext());
+//        if(bettingJson.nick_name !=null && null != userInfo && !TextUtils.isEmpty(userInfo.nick_name)){
+//            bettingJson.nick_name =userInfo.nick_name ;
+//        }
+//        String json =new Gson().toJson(bettingJson);
+//        sendTextMessage(json);
     }
 }
