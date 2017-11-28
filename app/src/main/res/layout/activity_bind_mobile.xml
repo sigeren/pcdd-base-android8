@@ -65,7 +65,7 @@
             android:textSize="14sp"
             android:background="@drawable/edit_panel"/>
 
-        <com.df.vip.pcdd.ui.widget.CountDownButton
+        <com.df.youxi.ui.widget.CountDownButton
             android:id="@+id/btnVCode"
             style="@style/btn_blue"
             android:layout_width="80dp"

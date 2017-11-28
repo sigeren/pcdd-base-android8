@@ -29,7 +29,7 @@
             android:text="@string/rule_backwater" />
     </LinearLayout>
 
-    <com.df.vip.pcdd.ui.widget.MyTabView
+    <com.df.youxi.ui.widget.MyTabView
         android:id="@+id/tabBackwater"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

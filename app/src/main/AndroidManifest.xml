@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.df.vip.pcdd" >
+    package="com.df.youxi" >
 
     <!-- 这个权限用于进行网络定位 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -42,7 +42,7 @@
         android:icon="@mipmap/app_log"
         android:largeHeap="true"
         android:label="@string/app_name"
-        android:name="com.df.vip.pcdd.app.PcddApp"
+        android:name="com.df.youxi.app.PcddApp"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
 
@@ -105,14 +105,14 @@
 
         <!-- 微信分享回调 -->
         <activity
-            android:name="com.df.vip.pcdd.wxapi.WXEntryActivity"
+            android:name="com.df.youxi.wxapi.WXEntryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <!-- share sdk end -->
 
-        <activity android:name="com.df.vip.pcdd.MainActivity"
+        <activity android:name="com.df.youxi.MainActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -121,67 +121,67 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.df.vip.pcdd.ui.MoreActivity"
+        <activity android:name="com.df.youxi.ui.MoreActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name="com.df.vip.pcdd.ui.LevelSelectActivity"
+        <activity android:name="com.df.youxi.ui.LevelSelectActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name="com.df.vip.pcdd.ui.RoomListActivity"
+        <activity android:name="com.df.youxi.ui.RoomListActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name="com.df.vip.pcdd.ui.EditPersonActivity"
+        <activity android:name="com.df.youxi.ui.EditPersonActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name="com.df.vip.pcdd.ui.WalletActivity"
+        <activity android:name="com.df.youxi.ui.WalletActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name="com.df.vip.pcdd.ui.BackwaterActivity"
+        <activity android:name="com.df.youxi.ui.BackwaterActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name="com.df.vip.pcdd.ui.AccountingRecordActivity"
+        <activity android:name="com.df.youxi.ui.AccountingRecordActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.GameRecordActivity"
+        <activity android:name="com.df.youxi.ui.GameRecordActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.RechargeRecordActivity"
+        <activity android:name="com.df.youxi.ui.RechargeRecordActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.WithdrawRecordActivity"
+        <activity android:name="com.df.youxi.ui.WithdrawRecordActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.RechargeActivity"
+        <activity android:name="com.df.youxi.ui.RechargeActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.BindBankActivity"
+        <activity android:name="com.df.youxi.ui.BindBankActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.GiftListActivity"
+        <activity android:name="com.df.youxi.ui.GiftListActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.RechargeOnlineFirstepActivity"
+        <activity android:name="com.df.youxi.ui.RechargeOnlineFirstepActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.RechargeOnlineSecondActivity"
+        <activity android:name="com.df.youxi.ui.RechargeOnlineSecondActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.LoginActivity"
+        <activity android:name="com.df.youxi.ui.LoginActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.RegisterActivity"
+        <activity android:name="com.df.youxi.ui.RegisterActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.SettingActivity"
+        <activity android:name="com.df.youxi.ui.SettingActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.ChatActivity"
+        <activity android:name="com.df.youxi.ui.ChatActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/horizontal_slide"
@@ -208,79 +208,79 @@
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="3ecea51f560650b1ed8a4b99808f52e8" />
         <!--环信end-->
-        <activity android:name="com.df.vip.pcdd.ui.GameRecordFilterActivity"
+        <activity android:name="com.df.youxi.ui.GameRecordFilterActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.WebLoadActivity"
+        <activity android:name="com.df.youxi.ui.WebLoadActivity"
             android:hardwareAccelerated="true"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize"/>
-        <activity android:name="com.df.vip.pcdd.ui.EditWithdrawPwdActivity"
+        <activity android:name="com.df.youxi.ui.EditWithdrawPwdActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.WithdrawActivity"
+        <activity android:name="com.df.youxi.ui.WithdrawActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.BindMobileActivity"
+        <activity android:name="com.df.youxi.ui.BindMobileActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.MyMessageActivity"
+        <activity android:name="com.df.youxi.ui.MyMessageActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.AliAcountListActivity"
+        <activity android:name="com.df.youxi.ui.AliAcountListActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.BankAccountListActivity"
+        <activity android:name="com.df.youxi.ui.BankAccountListActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.TransferBankActivity"
+        <activity android:name="com.df.youxi.ui.TransferBankActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan"/>
-        <activity android:name="com.df.vip.pcdd.ui.TransferAliActivity"
+        <activity android:name="com.df.youxi.ui.TransferAliActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan"/>
-        <activity android:name="com.df.vip.pcdd.ui.EditLoginPwdActivity"
+        <activity android:name="com.df.youxi.ui.EditLoginPwdActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.RechargeLogActivity"
+        <activity android:name="com.df.youxi.ui.RechargeLogActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.GiftExchangeLogActivity"
+        <activity android:name="com.df.youxi.ui.GiftExchangeLogActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.AboutActivity"
+        <activity android:name="com.df.youxi.ui.AboutActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.ResetLoginPwdActivity"
+        <activity android:name="com.df.youxi.ui.ResetLoginPwdActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.CusSvrActivity"
+        <activity android:name="com.df.youxi.ui.CusSvrActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan"/>
-        <activity android:name="com.df.vip.pcdd.ui.LoadingActivity"
+        <activity android:name="com.df.youxi.ui.LoadingActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.ShareActivity"
+        <activity android:name="com.df.youxi.ui.ShareActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.ProxyActivity"
+        <activity android:name="com.df.youxi.ui.ProxyActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden"/>
-        <activity android:name="com.df.vip.pcdd.ui.MyEarningActivity"
+        <activity android:name="com.df.youxi.ui.MyEarningActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.ShareRuleActivity"
+        <activity android:name="com.df.youxi.ui.ShareRuleActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.LotteryActivity"
+        <activity android:name="com.df.youxi.ui.LotteryActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
-        <activity android:name="com.df.vip.pcdd.ui.LotteryLogActivity"
+        <activity android:name="com.df.youxi.ui.LotteryLogActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"/>
     </application>

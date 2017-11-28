@@ -38,7 +38,7 @@
                 android:background="@drawable/img_wd_tx_diban"
                 android:orientation="horizontal">
 
-                <com.df.vip.pcdd.ui.widget.CircleImageView
+                <com.df.youxi.ui.widget.CircleImageView
                     android:id="@+id/rivAvatar"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
